@@ -88,11 +88,13 @@ class MusicLibraryController
     puts "Which song number would you like to play?"
     input = gets.chomp
 
-    if Song.all.length > = 
+    if input <= Song.all.length
       song = list_songs.find.with_index {|song, i| i + 1 == input}
+
+      "Playing #{song.name} by #{song.artist.name}"
+
     end
 
-    "Playing #{song.name} by #{song.artist.name}"
 
   end
 
