@@ -64,7 +64,7 @@ class MusicLibraryController
     puts "Please enter the name of an artist:"
     input = gets.chomp
     artist = Artist.find_by_name(input)
-    songs = artist.self.songs
+    songs = artist.songs
 
     songs.each_with_index do |song, i|
       puts "#{i+1}. #{song.name} - #{song.genre.name}"
