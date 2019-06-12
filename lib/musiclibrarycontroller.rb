@@ -87,6 +87,7 @@ class MusicLibraryController
   def play_song
     puts "Which song number would you like to play?"
     input = gets.chomp
+    binding.pry
 
     if input.to_i > 0 && input.to_i <= Song.all.length
       song = list_songs.find.with_index {|song, i| i + 1 == input.to_i}
