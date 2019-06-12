@@ -39,10 +39,8 @@ class MusicLibraryController
   def list_songs
     songs = Song.all.sort {|left, right| left.name <=> right.name}.uniq
 
-    binding.pry
-
-      songs.each_with_index do |song, i|
-        puts "#{i}. #{song.artist} - #{song.name} - #{song.genre}"
-      end
+    songs.each_with_index do |song, i|
+      puts "#{i}. #{song.artist} - #{song.name} - #{song.genre}"
+    end
   end
 end
