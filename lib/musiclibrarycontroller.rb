@@ -35,4 +35,11 @@ class MusicLibraryController
       user_input = gets.chomp
     end
   end
+
+  def list_songs
+    binding.pry
+    Songs.all.each_with_index do |song|
+      #something with a song
+    end
+  end
 end
