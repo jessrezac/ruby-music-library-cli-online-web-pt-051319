@@ -65,12 +65,10 @@ class MusicLibraryController
     input = gets.chomp
     if Artist.find_by_name(input)
       songs = Artist.find_by_name(input).songs
-    end
-    binding.pry
 
-    songs.each_with_index do |song, i|
-      puts "#{i+1}. #{song.name} - #{song.genre.name}"
+      binding.pry
     end
+
 
   end
 
