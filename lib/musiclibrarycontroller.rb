@@ -64,7 +64,7 @@ class MusicLibraryController
     puts "Please enter the name of an artist:"
     input = gets.chomp
 
-    songs = Song.all.select {|song| song.artist.name == user_input }
+    songs = Song.all.select {|song| song.artist.name == input }
 
     binding.pry
 
