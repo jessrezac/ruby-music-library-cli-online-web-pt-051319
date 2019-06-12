@@ -51,5 +51,5 @@ class MusicLibraryController
       puts "#{i+1}. #{artist}"
     end
   end
-  
+
 end
