@@ -91,7 +91,7 @@ class MusicLibraryController
     if input.to_i > 0 && input.to_i <= Song.all.uniq.length
       songs = list_songs
 
-      song = songs.find {|song, i| i + 1 == input.to_i}
+      song = songs.find_index {|i| i +1 == input.to_i}
 
       puts "Playing #{song.name} by #{song.artist.name}"
     end
