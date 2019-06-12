@@ -40,6 +40,7 @@ class MusicLibraryController
     songs = Song.all.sort {|left, right| left.name <=> right.name}.uniq
 
     songs.each_with_index do |song, i|
+      binding.pry
       puts "#{i}. #{song.artist} - #{song.name} - #{song.genre}"
     end
   end
