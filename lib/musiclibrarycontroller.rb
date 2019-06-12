@@ -64,9 +64,10 @@ class MusicLibraryController
     puts "Please enter the name of an artist:"
     user_input = gets.chomp
     songs = Song.all.select do |song|
+      binding.pry
+
       song.artist.name == user_input
     end
-    binding.pry
 
     songs.sort {|left,right| left.name <=> right.name}
 
