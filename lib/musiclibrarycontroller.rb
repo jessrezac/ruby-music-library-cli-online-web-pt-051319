@@ -89,6 +89,7 @@ class MusicLibraryController
     input = gets.chomp
 
     if input.to_i > 0 && input.to_i <= Song.all.uniq.length
+      binding.pry
       songs = list_songs
 
       song = songs.find_index {|i| i + 1 == input.to_i}
