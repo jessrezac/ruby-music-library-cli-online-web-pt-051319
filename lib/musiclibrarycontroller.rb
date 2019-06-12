@@ -65,6 +65,7 @@ class MusicLibraryController
     input = gets.chomp
 
     songs = Song.all.select {|song| song.artist.name == input }.sort {|left,right| left.name <=> right.name}
+    
 
     songs.each_with_index do |song, i|
       puts "#{i+1}. #{song.name} - #{song.genre.name}"
