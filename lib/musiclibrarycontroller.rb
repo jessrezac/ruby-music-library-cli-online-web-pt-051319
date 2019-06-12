@@ -93,8 +93,9 @@ class MusicLibraryController
 
       song = songs.find.with_index {|song, i| i + 1 == input.to_i}
 
-
       puts "Playing #{song.name} by #{song.artist.name}"
+    else
+      binding.pry
     end
 
   end
