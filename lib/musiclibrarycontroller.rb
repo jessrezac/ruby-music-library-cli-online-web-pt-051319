@@ -41,7 +41,7 @@ class MusicLibraryController
 
     songs.each_with_index do |song, i|
       binding.pry
-      puts "#{i}. #{song.artist} - #{song.name} - #{song.genre}"
+      puts "#{i+1}. #{song.artist} - #{song.name} - #{song.genre}"
     end
   end
 end
