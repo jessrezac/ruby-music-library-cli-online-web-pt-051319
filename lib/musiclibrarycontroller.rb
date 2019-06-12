@@ -90,7 +90,7 @@ class MusicLibraryController
 
     binding.pry
 
-    if input.to_i <= Song.all.size
+    if Song.all.size >= input.to_i
       song = list_songs.find.with_index {|song, i| i + 1 == input.to_i}
 
       "Playing #{song.name} by #{song.artist.name}"
