@@ -67,9 +67,9 @@ class MusicLibraryController
       song.artist.name == user_input
     end
 
-    songs.sort {|left,right| left.name <=> right.name}
+    sorted_songs = songs.sort {|left,right| left.name <=> right.name}
 
-    songs.each_with_index do |song, i|
+    sorted_songs.each_with_index do |song, i|
       puts "#{i+1}. #{song.name} - #{song.genre.name}"
     end
 
