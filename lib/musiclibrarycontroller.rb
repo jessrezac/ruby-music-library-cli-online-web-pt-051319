@@ -88,14 +88,14 @@ class MusicLibraryController
     puts "Which song number would you like to play?"
     input = gets.chomp
 
-    if input.to_i > 0 && input.to_i <= Song.all.length
-      songs = Song.all.sort {|left, right| left.name <=> right.name}.uniq
+    binding.pry
 
-      song = songs.find.with_index {|song, i| i + 1 == input.to_i}
+    if input.to_i > 0 && input.to_i <= Song.all.length
+      songs = list_songs
+
+      song = songs.find {|song, i| i + 1 == input.to_i}
 
       puts "Playing #{song.name} by #{song.artist.name}"
-    else
-      binding.pry
     end
 
   end
