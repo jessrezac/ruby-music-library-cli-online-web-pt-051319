@@ -64,4 +64,14 @@ class MusicLibraryController
     end
   end
 
+  def list_songs_by_artist
+    puts "Please enter the name of an artist:"
+    user_input = gets.chomp
+    songs = Song.all.select do |song|
+      song.artist.name == user_input
+    end.sort{|left,right| left.name <=> right.name}
+
+    return_songs(songs)
+  end
+
 end
